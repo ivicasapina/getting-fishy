@@ -1,0 +1,38 @@
+{
+  "name": "cotd",
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "https://ivicasapina.github.io/getting-fishy/",
+  "devDependencies": {
+    "autoprefixer-stylus": "0.10.0",
+    "babel-eslint": "^7.1.1",
+    "concurrently": "3.0.0",
+    "eslint": "^3.12.2",
+    "eslint-plugin-flowtype": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.8.0",
+    "react-scripts": "0.6.1",
+    "stylus": "0.54.5"
+  },
+  "dependencies": {
+    "firebase": "^4.12.1",
+    "history": "4.7.2",
+    "prop-types": "^15.6.1",
+    "re-base": "3.2.2",
+    "react": "16.2.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "16.2.0",
+    "react-router-dom": "4.2.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
+    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/react-scripts/.eslintrc"
+  }
+}
