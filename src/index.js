@@ -7,12 +7,11 @@ import App from './components/App';
 import StorePicker from './components/StorePicker';
 import NotFound from './components/NotFound';
 
-// samo za github pages
-const repo = window.location.pathname;
 
 const Root = () => {
   return (
-    <BrowserRouter basename={repo}>
+    // <BrowserRouter basename="/getting-fishy/"> koristimo samo za gitpages, jer trebaju imati basename === github project name
+    <BrowserRouter basename="/getting-fishy/">
       <Switch>
         <Route path="/" component={StorePicker} exact />
         <Route path="/store/:storeId" component={App} />
